@@ -47,9 +47,9 @@ body,html{
     align-items: center;
 }
 
-.main__first span {
-    width:30%;
-    height:90%;
+.main__first div span {
+    width:100%;
+    height:100%;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -58,6 +58,29 @@ body,html{
     font-size:0.5em;
     color:white;
 }
+
+.main__first div{
+    width:30%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.main__first div:after{
+    content: "";
+    display: block;
+    width: 25%;
+    height: 11%;
+    border-left: 5px solid #0984e3;
+    border-right: 5px solid #0984e3;
+    position: absolute;
+    top:26%;
+  
+}
+
 
 
 .main__second{
@@ -68,15 +91,17 @@ body,html{
     justify-content: space-around;
     font-size:0.5em;
 }
+
 .main__second div:first-child:after{
     content: "";
     display: block;
     width: 10%;
-    height: 70px;
+    height: 10%;
+    border-left: 5px solid #d63031;
     border-right: 5px solid #d63031;
     position: absolute;
-    top:200px;
-    left:80px;
+    top:27%;
+    left:10%;
 }
 
 
@@ -86,22 +111,22 @@ body,html{
     content: "";
     display: block;
     width: 10%;
-    height: 70px;
+    height: 10%;
     border-right: 5px solid #0984e3;
     position: absolute;
-    top:200px;
-    left:600px;
+    top:27%;
+    left:40%;
 }
 
 .main__second div:last-child:after{
     content: "";
     display: block;
     width: 10%;
-    height: 70px;
+    height: 10%;
     border-right: 5px solid #00b894;
     position: absolute;
-    top:200px;
-    right:180px;
+    top:27%;
+    right:10%;
 }
 
 .main__second div {
@@ -151,22 +176,22 @@ body,html{
     content: "";
     display: block;
     width: 10%;
-    height: 70px;
+    height: 10%;
     border-left: 5px solid #d63031;
     position: absolute;
-    top:330px;
-    left:120px;
+    top:45%;
+    left:7%;
 }
 
 .main__third div:nth-child(2):after{
     content: "";
     display: block;
     width: 10%;
-    height: 70px;
+    height: 10%;
     border-left: 5px solid #d63031;
     position: absolute;
-    top:330px;
-    left:320px;
+    top:45%;
+    left:20%;
 }
 
 
@@ -174,23 +199,24 @@ body,html{
     content: "";
     display: block;
     width: 10%;
-    height: 70px;
+    height: 11%;
     border-left: 5px solid #0984e3;
     position: absolute;
-    top:355.5px;
-    left:510px;
-    transform: rotateZ(20deg);
+    top:47%;
+    left:32%;
+    transform: rotateZ(10deg);
+   
 }
 
 .main__third div:nth-child(4):after{
     content: "";
     display: block;
     width: 10%;
-    height: 70px;
+    height: 11%;
     border-left: 5px solid #0984e3;
     position: absolute;
-    top:330px;
-    left:770px;
+    top:45%;
+    left:50%;
  
 }
 
@@ -198,12 +224,12 @@ body,html{
     content: "";
     display: block;
     width: 10%;
-    height: 250px;
+    height: 50%;
     border-left: 5px solid #0984e3;
     position: absolute;
-    top:310px;
-    left:850px;
-    transform: rotateZ(110deg);
+    top:35%;
+    left:55%;
+    transform: rotateZ(102deg);
  
 }
 
@@ -211,12 +237,13 @@ body,html{
     content: "";
     display: block;
     width: 10%;
-    height: 600px;
+    height: 80%;
     border-left: 5px solid #0984e3;
     position: absolute;
-    top:135px;
-    left:1000px;
-    transform: rotateZ(100deg);
+    top:20%;
+    left:65%;
+    transform: rotateZ(97deg);
+
  
 }
 
