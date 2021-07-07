@@ -5,9 +5,7 @@ const inputThird = form.querySelector("#input-third");
 const mainBox = document.querySelector(".main-box");
 const ul = mainBox.querySelector("ul");
 const li = ul.querySelectorAll("li");
-
-
-
+const body = document.querySelector("body");
 
 function handlerFirstClickEvent(e){
     e.preventDefault();
@@ -22,10 +20,9 @@ function handlerSecondClickEvent(e){
 function handlerThirdClickEvent(e){
     e.preventDefault();
     li[2].innerText = "코린이 탈출이다";
+    body.style.backgroundImage = "url('https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif')";
+    
 }
-
-
-
 
 
 inputFirst.addEventListener("click",handlerFirstClickEvent);
