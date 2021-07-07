@@ -6,6 +6,7 @@ const mainBox = document.querySelector(".main-box");
 const ul = mainBox.querySelector("ul");
 const li = ul.querySelectorAll("li");
 const body = document.querySelector("body");
+let count = 1;
 
 function handlerFirstClickEvent(e){
     e.preventDefault();
@@ -21,7 +22,18 @@ function handlerThirdClickEvent(e){
     e.preventDefault();
     li[2].innerText = "코린이 탈출이다";
     body.style.backgroundImage = "url('https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif')";
-    
+    // if(count%2 === 1){
+    // e.preventDefault();
+    // li[2].innerText = "코린이 탈출이다";
+    // body.style.backgroundImage = "url('https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif')";
+    //     count++;
+    // } else {
+    //     for(let i = 0; i < li.length; i++){
+    //         li[i].innerText = "";
+    //     }
+    //     body.style.backgroundImage = "none";
+    //     count++;
+    // } 
 }
 
 
