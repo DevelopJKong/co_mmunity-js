@@ -224,10 +224,10 @@ body,html{
     content: "";
     display: block;
     width: 10%;
-    height: 50%;
+    height: 48%;
     border-left: 5px solid #0984e3;
     position: absolute;
-    top:35%;
+    top:37.5%;
     left:55%;
     transform: rotateZ(102deg);
  
@@ -237,12 +237,12 @@ body,html{
     content: "";
     display: block;
     width: 10%;
-    height: 80%;
+    height: 79%;
     border-left: 5px solid #0984e3;
     position: absolute;
-    top:20%;
-    left:65%;
-    transform: rotateZ(97deg);
+    top:21%;
+    left:67%;
+    transform: rotateZ(98deg);
 
 }
 
@@ -311,7 +311,7 @@ body,html{
     height: 16%;
     border-left: 5px solid #0984e3;
     position: absolute;
-    top:68%;
+    top:70%;
     left:45%;
     transform: rotateZ(50deg);
 }
@@ -321,10 +321,10 @@ body,html{
     content: "";
     display: block;
     width: 10%;
-    height: 32%;
+    height: 33%;
     border-left: 5px solid #0984e3;
     position: absolute;
-    top:62%;
+    top:63%;
     left:57%;
     transform: rotateZ(70deg);
 }
@@ -360,24 +360,24 @@ body,html{
     content: "";
     display: block;
     width: 10%;
-    height: 45%;
+    height: 50%;
     border-left: 5px solid #0984e3;
     position: absolute;
-    top:58%;
-    left:76%;
-    transform: rotateZ(70deg);
+    top:55%;
+    left:78%;
+    transform: rotateZ(78deg);
 }
 
 .main__forth div:nth-child(12):after{
     content: "";
     display: block;
     width: 10%;
-    height: 65%;
+    height: 66%;
     border-left: 5px solid #0984e3;
     position: absolute;
-    top:46%;
+    top:47%;
     left:73%;
-    transform: rotateZ(81deg);
+    transform: rotateZ(82deg);
 }
 
 
@@ -466,7 +466,7 @@ body,html{
     height:10%;
     border-right: 5px solid #0984e3;
     position: absolute;
-    top:81%;
+    top:82%;
     left:49%;
     
 }
@@ -478,7 +478,7 @@ body,html{
     height:10%;
     border-right: 5px solid #0984e3;
     position: absolute;
-    top:81%;
+    top:82%;
     left:59%;
     
 }
