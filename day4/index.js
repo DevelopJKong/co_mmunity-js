@@ -19,3 +19,17 @@ for(let value in number){
     value = number[value];
     console.log(value);
 }
+
+const mainBox = document.querySelector(".main-box");
+const mainTxt = mainBox.querySelector(".main-box__txt");
+const img = mainBox.querySelector("div");
+
+mainTxt.addEventListener("mouseover",function(){
+    mainTxt.innerText = "Thank you😎"
+    img.style.opacity = 1;
+});
+
+mainTxt.addEventListener("mouseout",function(){
+    mainTxt.innerText = "싫으면 마우스를 올려주세요 😥"
+    img.style.opacity = 0;
+});

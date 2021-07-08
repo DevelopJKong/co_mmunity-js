@@ -20,10 +20,38 @@ body,html{
     align-items: flex-start;
     justify-content: flex-end;
     color:white;
+    flex-direction: column;
 }
 
 .main-box span {
     font-family: 'Jua', sans-serif;
     font-size: 1em;
     border-bottom: 5px solid #fdcb6e;
+}
+
+.main-box p {
+    width:25%;
+    font-family: 'Jua', sans-serif;
+    font-size: 1em;
+    border-bottom: 5px solid #d63031;
+    color:#ff7675;
+    transition: all .5s;
+}
+
+.main-box p:hover{
+    color:#fdcb6e;
+    cursor:pointer;
+}
+
+.main-box div {
+    display:flex;
+    width:50%;
+    height:50%;
+    background-image: url("./img/console.png");
+    position: absolute;
+    z-index: 100;
+    top:10%;
+    opacity: 0;
+    transition: all .5s;
+
 }
