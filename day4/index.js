@@ -10,6 +10,30 @@ const number = {
     nine : 9,
     ten : 10
 };
+const colors = [
+    "#ef5777",
+    "#575fcf",
+    "#4bcffa",
+    "#34e7e4",
+    "#0be881",
+    "#f53b57",
+    "#3c40c6",
+    "#0fbcf9",
+    "#00d8d6",
+    "#05c46b",
+    "#ffc048",
+    "#ffdd59",
+    "#ff5e57",
+    "#d2dae2",
+    "#485460",
+    "#ffa801",
+    "#ffd32a",
+    "#ff3f34"
+  ];
+  
+
+
+
 
 for(let key in number){
     console.log(key);
@@ -34,7 +58,21 @@ function handlerClickNumberUp(){
     count++
     console.log(count);
 }
-
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min; //최댓값도 포함, 최솟값도 포함
+  }
+  
+  let randomFrist = getRandomIntInclusive(0, colors.length);
+  let randomSecond = getRandomIntInclusive(0, colors.length);
+  
+  function handlerBtnClickEvent() {
+    btn.style.background = `linear-gradient(45deg,${colors[randomFrist]},${colors[randomSecond]})`;
+    randomFrist = getRandomIntInclusive(0, colors.length);
+    randomSecond = getRandomIntInclusive(0, colors.length);
+  }
+  
 mainTxt.addEventListener("mouseover",function(){
     mainTxt.innerText = "Thank you😎"
     img.style.opacity = 1;
@@ -55,3 +93,4 @@ btn.addEventListener("mouseout",function(){
 });
 
 btn.addEventListener("click",handlerClickNumberUp);
+btn.addEventListener("click",handlerBtnClickEvent);
