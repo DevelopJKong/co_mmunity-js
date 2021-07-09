@@ -43,7 +43,7 @@ body,html{
     cursor:pointer;
 }
 
-.main-box div {
+.main-box .img {
     display:flex;
     width:38%;
     height:54%;
@@ -55,5 +55,38 @@ body,html{
     top:5%;
     opacity: 0;
     transition: all .5s;
-
 }
+
+.console-number-up{
+    width:95%;
+    height:10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+.console-number-up button{
+    width:20%;
+    height:50%;
+    font-family: 'Jua', sans-serif;
+    background:linear-gradient(45deg,red,blue);
+    color:white;
+}
+
+
+.console__number-box{
+    width:30%;
+    height:30%;
+    display:flex;
+    position: absolute;
+    border: 5px solid white;
+    top:30%;
+    right:3%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition:  all .5s;
+    font-family: 'Jua', sans-serif;
+}
+
