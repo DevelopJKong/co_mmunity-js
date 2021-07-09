@@ -45,9 +45,11 @@ body,html{
 
 .main-box div {
     display:flex;
-    width:55%;
-    height:55%;
+    width:38%;
+    height:54%;
     background-image: url("./img/console.png");
+    background-size:cover;
+    background-position: top center;
     position: absolute;
     z-index: 100;
     top:5%;
