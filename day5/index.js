@@ -21,15 +21,13 @@ const body = document.querySelector("body");
 const div = body.querySelector("div");
 const section = div.querySelectorAll("section");
 const sectionHeight = section[0].scrollHeight;
-let count = 0;
+let count = 1;
 
 div.addEventListener("wheel",function(){
-    if(count === 0){
-        div.querySelector(".content-first").style.opacity = 1;
-        count++;
-    }else if(count === 1){
+    if(count === 1){
         div.querySelector(".content-second").style.opacity = 1;
         count++;
+        console.log(count);
     }else if(count === 2) {
         div.querySelector(".content-third").style.opacity = 1;
         count++;
@@ -41,6 +39,20 @@ div.addEventListener("wheel",function(){
         count++;
     }
 });
+
+// div.addEventListener("scroll",function(e){
+//     e.preventDefault();
+// })
+// 
+// div.addEventListener("touchmove",function(e){
+//     e.preventDefault();
+// })
+// 
+// div.addEventListener("wheel",function(e){
+//     e.preventDefault();
+// })
+
+
 
 
 //     if( window.scrollY<=sectionHeight){
