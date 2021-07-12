@@ -11,7 +11,7 @@ window.addEventListener('scroll',function(){
     moon.style.top = value*1.05+"px";
 
     mountainsBehind.style.top = value*0.5+"px";
-    text.style.marginRight = value*3.7+"px";
+    text.style.marginRight = value*4.55+"px";
     text.style.marginTop = value*1.7+"px";
     btn.style.marginTop = value*1.7+"px";
     header.style.top = value*0.5+"px";
@@ -24,3 +24,23 @@ console.log(`x+y=${x+y}`);
 console.log(`x-y=${x-y}`);
 console.log(`x*y=${x*y}`);
 console.log(`x/y=${x/y}`);
+
+
+let sec = document.querySelector(".sec");
+let secDiv = sec.querySelector(".sec__text");
+let secImg = sec.querySelector(".sec__img");
+
+secDiv.addEventListener("mouseover",function(){
+    secDiv.innerText = "Thank you! 😊";
+    secDiv.style.color = "#fdcb6e";
+    secImg.style.opacity = 1;
+});
+
+secDiv.addEventListener("mouseout",function(){
+    secDiv.innerText = "콘솔에서 출력 해 보세요😎 아니면 일단 올려보세요 마우스🙄";
+    secDiv.style.color = "white";
+    secImg.style.opacity = 0;
+});
+
+
+
