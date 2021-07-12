@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 *{
     margin:0;
     padding:0;
@@ -146,4 +146,9 @@ section img#mountains_front{
 .sec p{
     font-size:1em;
     color:#fff;
+}
+
+.sec span{
+    font-size:2em;
+    font-family: 'Jua', sans-serif;
 }

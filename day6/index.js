@@ -16,3 +16,11 @@ window.addEventListener('scroll',function(){
     btn.style.marginTop = value*1.7+"px";
     header.style.top = value*0.5+"px";
 });
+
+let x = 1;
+let y = 2;
+
+console.log(`x+y=${x+y}`);
+console.log(`x-y=${x-y}`);
+console.log(`x*y=${x*y}`);
+console.log(`x/y=${x/y}`);
