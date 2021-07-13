@@ -3,11 +3,12 @@ const text = div.querySelector("h2");
 const restart = document.querySelector("#restart");
 const stop = document.querySelector("#stop");
 
-
-
 function handlerTime(){
     const date = new Date();
-    text.innerText = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    const seconds = String(date.getSeconds()).padStart(2, "0");
+    text.innerText = `${hours}:${minutes}:${seconds}`;
    
 }
 
