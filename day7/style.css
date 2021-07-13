@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&family=Song+Myung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
 * {
     margin:0;
     padding:0;
@@ -7,7 +8,7 @@
 }
 
 .main{
-    width:20%;
+    width:50%;
     height:100%;
     display:flex;
     align-items: center;
@@ -17,6 +18,14 @@
     top:-200px;
     color:white;
     letter-spacing: 10px;
+}
+
+.main p {
+    width:50%;
+    height:5%;
+    font-size:40px;
+    font-family: 'Cute Font', cursive;
+    color:#fdcb6e;
 }
 
 
