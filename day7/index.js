@@ -18,7 +18,7 @@ function handlerTime(){
 
 handlerTime();
 let repeat = setInterval(handlerTime,1000);
-setTimeout(()=>clearTimeout(repeat),3000);
+setTimeout(()=>clearTimeout(repeat),2000);
 
 restart.addEventListener("click",function(e){
     e.preventDefault();
