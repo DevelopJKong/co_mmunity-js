@@ -9,7 +9,7 @@
 </head>
 <body>
     <section>
-        <div class="bannerVideo" id="slidshow">
+        <div class="bannerVideo" id="slideShow">
             <video src="video/flipped.mp4" autoplay muted loop class="active"></video>
             <video src="video/aboutTime.mp4" autoplay muted loop></video>
             <video src="video/당신거기있어줄래요.mp4" autoplay muted loop></video>
@@ -17,36 +17,36 @@
         </div>
         <div class="container">
             <header id="navbar">
-                <a href="#" class="logo">world</a>
+                <a href="#" class="logo">Cafe Small House</a>
                    
                     <ul>
-                       <li><a href="#" class="active">Home</a></li> 
-                       <li><a href="#">Destination</a></li>
-                       <li><a href="#">About</a></li>
-                       <li><a href="#">Contact</a></li>
+                       <li><a href="../day9/index.html" class="active">Movie</a></li> 
+                       <li><a href="../day8/index.html">Day8</a></li>
+                       <li><a href="../day7/index.html">Day7</a></li>
+                       <li><a href="../day6/index.html">Day6</a></li>
                     </ul>
-              
+                    <span class="menuIcon" onclick="toggleMenu();"></span>
             </header>
             <div class="content">
-                <div class="bannerText">
+                <div class="bannerText" id="slideShowText">
                     <div class="active">
-                        <h2>Flipped</h2>
-                        <p>Flipped의 관한 내용입니다</p>
+                        <h2></h2>
+                        <p></p>
                     </div>
 
                     <div>
-                        <h2>AboutTime</h2>
-                        <p>AboutTime의 관한 내용입니다</p>
+                        <h2></h2>
+                        <p></p>
                     </div>
                     
                     <div>
-                        <h2>당신거기있어줄래요</h2>
-                        <p>당신거기있어줄래요의 관한 내용입니다</p>
+                        <h2></h2>
+                        <p></p>
                     </div>
 
                     <div>
-                        <h2>17Again</h2>
-                        <p>17Again의 관한 내용입니다</p>
+                        <h2></h2>
+                        <p></p>
                     </div>
 
                 </div>
@@ -59,8 +59,8 @@
             </ul>
 
             <ul class="controls">
-                <li><img src="img/left.png"></li>
-                <li><img src="img/right.png"></li>
+                <li onclick="prevSlide();prevSlideText();"><img src="img/left.png"></li>
+                <li onclick="nextSlide();nextSlideText();"><img src="img/right.png"></li>
             </ul>
         </div>
     </section>
