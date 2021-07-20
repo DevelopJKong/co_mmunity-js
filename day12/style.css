@@ -19,7 +19,18 @@ body,html {
     cursor:url("img/coffee_icon_small.cur"),auto !important;
 
 }
-
+.block-box{
+    position:absolute;
+    width:100vw;
+    height:100vw;
+    background-color: black;
+    color:white;
+    display:none;
+    align-items:center;
+    justify-content: center;
+    z-index:100;
+    flex-direction: column;
+}
 
 
 .main{
@@ -51,7 +62,25 @@ body,html {
     justify-content: center;
 }
 
+.img-baloon__wrapper{
+    position:absolute;
+    width:17%;
+    height:50%;
+    border:1px solid rgba(0,0,0,0.4),1px solid rgba(0,0,0,0.4),1px solid rgba(0,0,0,0.4);
+    left:5%;
+    opacity: 0;
+    transition: all .5s;
+    
+   
+}
 
+.img-baloon__wrapper img{
+    width:100% !important;
+    height:100% !important;
+    object-fit: cover !important;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
 
 .main .main__content-box ul li {
     list-style: none;
