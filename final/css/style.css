@@ -1,8 +1,13 @@
 @import url("reset.css");
+@import url("font.css");
 
 body,html{
     width:100vw;
     height:200vh;
+}
+a{
+    text-decoration: none;
+    color:black;
 }
 
 header{
@@ -14,14 +19,89 @@ header{
     position:fixed;
     border-bottom: 1px solid black;
     background-color: white;
+    font-family: 'Playfair Display', serif;
 }
 
 header div {
     padding:10px;
 }
+
+header div:first-child span a{
+    transition: all .5s;
+}
+
+header div:first-child span a:hover {
+    color:#ff3838;
+}
+
+
+
+header div:nth-child(2) span {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header div:nth-child(2) span a{
+    transition:all .5s;
+}
+
+
+header div:nth-child(2) span a:hover {
+ 
+    color:#00b894
+}
+
+
+
 header div span{
     padding:10px;
 }
+
+.chatbot{
+    position:fixed;
+    bottom:30px;
+    right:15px;
+    width:5%;
+    height:10%;
+    border:1px solid rgba(0,0,0,0.2);
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color:rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.chatbot-content{
+    position:fixed;
+    width:18%;
+    height:55%;
+    border: 1px solid rgba(0,0,0,0.1);
+    bottom:30px;
+    right:15px;
+    border-radius: 5%;
+    display:none;
+    align-items: center;
+    justify-content: space-around;
+    background:linear-gradient(20deg,white,#0984e3);
+    flex-direction: column;
+}
+
+.chatbot-content .chatbot-content__text{
+    font-size: 30px;
+    font-family: 'Encode Sans SC', sans-serif;
+    color:white;
+    font-weight: bold;
+}
+
+.chatbot-content .chatbot-content__box{
+    width:90%;
+    height:80%;
+    background-color: white;
+    border-radius: 5%;
+
+}
+
 
 main{
     padding-top:10%;
@@ -47,6 +127,13 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
    
 }
+
+.main-img div span {
+    font-size:42px;
+    font-family: 'Playfair Display', serif;
+}
+
