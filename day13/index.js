@@ -11,12 +11,18 @@ const message = [
     request:"friend",
     response:"☕: thannks a lot!" 
 },
-{
 
+{
+    request:"good bye",
+    response:"see you again"
+},
+
+{
     request:"sorry",
-    response:"☕: don't say like that"
-   
+    response:"☕: don't say like that" 
 }
+
+
 ];
 const block = document.querySelector(".block-box");
 const blockBtn = block.querySelector("input");
@@ -47,6 +53,7 @@ inputText.addEventListener("submit",function(e){
         imgWrapper.style.opacity = 0;
         ul.querySelector("li").innerText = message[0].response;
     } else if(inputValue === message[1].request) {
+        //sad
         ul.querySelector("li").innerText = message[1].response;
         setTimeout(function(){
             block.style.display ="flex";
@@ -56,10 +63,14 @@ inputText.addEventListener("submit",function(e){
         //friend
         imgWrapper.style.opacity = 1;
         ul.querySelector("li").innerText = message[2].response;
-    } else {
-        //sorry & nothing & something
+    } else if(inputValue === message[3].request){
+        //good bye
         imgWrapper.style.opacity = 0;
         ul.querySelector("li").innerText = message[3].response;
+    } else{
+        //sorry & nothing & something
+        imgWrapper.style.opacity = 0;
+        ul.querySelector("li").innerText = message[4].response;
     }
 });
 
