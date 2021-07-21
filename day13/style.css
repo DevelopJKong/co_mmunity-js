@@ -82,6 +82,54 @@ body,html {
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
 }
 
+.pre__report{
+    position:absolute;
+    width:32%;
+    height:40%;
+    right:0;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5,1fr);
+    border:5px solid white;
+    background-color: white;
+    display:none;
+}
+
+.pre__report .report-flex {
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+
+}
+.pre__report .report-flex:hover{
+ 
+    background:#FDE216;
+}
+
+.pre__report .report-flex a {
+    text-decoration: none;
+    color:black;
+    font-size: 32px ;
+    transition: all .5s;
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pre__report .report-flex a:hover{
+    color:white;
+}
+
+
+
+
+
+
 .main .main__content-box ul li {
     list-style: none;
 } 
