@@ -2,7 +2,7 @@
 @import url("../css/font.css");
 
 body,html{
-    width:100vw;
+    width:99vw;
     height:200vh;
 }
 a{
@@ -186,11 +186,15 @@ main{
     justify-content: center;
     background-color: #f7f1e3;
     position: relative;
-    color:#fdcb6e;
-    font-size:40px;
-
-    font-family: 'Great Vibes', cursive;
+  
  
+}
+.grid-box span{
+    color:#fdcb6e;
+    font-family: 'Great Vibes', cursive;
+    padding-bottom: 10px;
+    font-size:52px;
+    border-bottom: 5px solid #fdcb6e;
 }
 
 .grid-box img {
