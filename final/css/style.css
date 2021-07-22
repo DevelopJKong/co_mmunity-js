@@ -73,28 +73,42 @@ header div span{
     color:rgba(0,0,0,0.5);
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
     cursor: pointer;
-    z-index: 10000;
+    z-index: 100;
 }
 .chatbot-content{
     position:fixed;
     width:18%;
-    height:55%;
-    border: 1px solid rgba(0,0,0,0.1);
+    height:65%;
+
     bottom:30px;
     right:15px;
     border-radius: 5%;
     display:none;
     align-items: center;
     justify-content: space-around;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
     background:linear-gradient(20deg,white,#0984e3);
     flex-direction: column;
+    z-index: 101;
 }
 
 .chatbot-content .chatbot-content__text{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
     font-size: 30px;
-    font-family: 'Encode Sans SC', sans-serif;
+    font-family: 'Great Vibes', cursive;
     color:white;
     font-weight: bold;
+    cursor: default;
+}
+.chatbot-content .chatbot-content__text i{
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.chatbot-content .chatbot-content__text i:hover{
+    color:#d63031;
 }
 
 .chatbot-content .chatbot-content__box{
@@ -167,6 +181,11 @@ main{
 
 
 }
+
+.grid-span span {
+    padding: 5%;
+}
+
 
 .grid-box__wrapper{
     width:100%;
