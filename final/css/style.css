@@ -3,7 +3,7 @@
 
 body,html{
     width:100vw;
-    height:700vh;
+    height:200vh;
 }
 a{
     text-decoration: none;
@@ -20,6 +20,7 @@ header{
     border-bottom: 1px solid black;
     background-color: white;
     font-family: 'Playfair Display', serif;
+    z-index:100;
 }
 
 header div {
@@ -62,6 +63,7 @@ header div span{
     right:15px;
     width:5%;
     height:10%;
+    background-color:white;
     border:1px solid rgba(0,0,0,0.2);
     border-radius: 50%;
     display:flex;
@@ -71,6 +73,7 @@ header div span{
     color:rgba(0,0,0,0.5);
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
     cursor: pointer;
+    z-index: 10000;
 }
 .chatbot-content{
     position:fixed;
@@ -104,9 +107,9 @@ header div span{
 
 
 main{
-    padding-top:6%;
+ 
     width:100%;
-    height:100%;
+    height:55%;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -115,7 +118,7 @@ main{
 
  main .section-banner{
     width:80%;
-    height:40%;
+    height:75%;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -144,7 +147,10 @@ main{
     height:100%;
     display:grid;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(6,1fr);
+    grid-template-rows: 1fr 3fr 3fr 3fr 3fr 3fr;
+   
+    font-family: 'Playfair Display', serif;
+   
 
 
 }
@@ -156,10 +162,21 @@ main{
     align-items: center;
     justify-content: center;
     grid-column: 1/span 2;
+    color:#0984e3;
+    font-size:62px;
+
 
 }
 
-
+.grid-box__wrapper{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+ 
+}
 
 .grid-box {
     width:100%;
@@ -167,5 +184,78 @@ main{
     display:flex;
     align-items: center;
     justify-content: center;
+    background-color: #f7f1e3;
+    position: relative;
+    color:#fdcb6e;
+    font-size:40px;
+
+    font-family: 'Great Vibes', cursive;
  
+}
+
+.grid-box img {
+    position: absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:100%;
+    top:0;
+    right:0;
+    object-fit: cover;
+    object-position: center center;
+
+}
+
+.grid-box__second__wrapper{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    flex-direction: column;
+ 
+}
+.second__wrapper-header {
+    color:#0984e3;
+    font-size:62px;
+    font-family: 'Playfair Display', serif;
+
+}
+
+.section__second-grid{
+    width:100%;
+    height:100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+.section__second-grid a {
+    width:100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.section__second-grid a span{
+    width:90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffeaa7;
+    color:#0984e3;
+
+    flex-direction: column;
+    font-size: 42px;
+    box-shadow: 10px 5px 5px 5px rgba(0,0,0,0.3);
+    font-family: 'Great Vibes', cursive;
+    transition: all .5s;
+}
+.section__second-grid a span:hover{
+    background-color: black;
+    color:white;
 }
