@@ -4,6 +4,15 @@ const text = chatContent.querySelector(".chatbot-content__text");
 const closeIcon = text.querySelector("i");
 let count = 0;
 
+const chatBox = chatContent.querySelector(".chatbot-content__box")
+
+
+
+
+
+
+
+
 chat.addEventListener("click",function(){
         chatContent.style.display = "flex";
         chat.style.display = "none";
