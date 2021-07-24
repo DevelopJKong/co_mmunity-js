@@ -125,7 +125,7 @@ chatInput.addEventListener("submit",function(e){
     let value = chatInput.value;
 
     if(key == 1){ //key 값이 1인 경우, 사용자의 선택 유도
-        console.log(1);
+        chatInput.value = "";
 		if(value == "네"){
 			chatLi.innerHTML = "대답을 입력해주세요!";
 			key = 2; //key 값을 2로 만들어, 대답을 입력받는 조건으로 변경
@@ -168,6 +168,7 @@ chatBtn.addEventListener("click",function(e){
 
 
     if(key == 1){ //key 값이 1인 경우, 사용자의 선택 유도
+        chatInput.value = "";
 		if(value == "네"){
 			chatLi.innerHTML = "대답을 입력해주세요!";
 			key = 2; //key 값을 2로 만들어, 대답을 입력받는 조건으로 변경
