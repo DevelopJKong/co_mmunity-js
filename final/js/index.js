@@ -43,7 +43,7 @@ const message = [
     
     {
         request:"day9",
-        response:"<span>맨 아래 day8 깃허브 링크를 통해 볼수있어요!</span>"+
+        response:"<span>맨 아래 day9 깃허브 링크를 통해 볼수있어요!</span>"+
         "<span><a href='https://developjkong.github.io/co_mmunity-js/day9/index.html'>day9을 클릭해서 보세요<i class='fab fa-github-alt'></i></a></span>" 
     },
     {
