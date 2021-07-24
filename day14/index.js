@@ -53,6 +53,7 @@ inputText.addEventListener("submit",function(e){
     let inputValue = inputText.value;
     inputText.value = '';
     ul.appendChild(li);
+
     if(inputValue === message[0].request){
         //would?
         report.style.display = "none";

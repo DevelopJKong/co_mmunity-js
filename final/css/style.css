@@ -2,7 +2,7 @@
 @import url("../css/font.css");
 
 body,html{
-    width:99vw;
+    width:98vw;
     height:200vh;
 }
 a{
@@ -92,6 +92,14 @@ header div span{
     flex-direction: column;
     z-index: 101;
 }
+.chatbot-content form{
+    width:100%;
+    height:4%;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
 
 .chatbot-content .chatbot-content__text{
     width:100%;
@@ -143,22 +151,67 @@ header div span{
     display:flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .chatbot__response ul li {
     width:100%;
-    height:50%;
+    height:80%;
     display:flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
     font-family: 'Nanum Gothic', sans-serif;
+    font-size: 15px;
 }
+
+.chatbot__response ul li span{
+    width:89%;
+    height:100%;
+}
+
+.chatbot__response ul li span a {
+    color:#ff3838;
+    transition: all .5s;
+}
+
+.chatbot__response ul li span a i {
+    font-size: 30px;
+}
+
+.chatbot__response ul li span a:hover{
+    color:#fdcb6e;
+}
+
 
 .chatbot-content .chatbot-content__box img {
     width:50%;
     height:50%;
     object-fit: cover;
+}
+
+.chatbot-content #chat-input {
+    outline: none;
+    transition: all .5s;
+    cursor: pointer;
+}
+.chatbot-content #chat-input:focus{
+    border: 2px solid #fdcb6e;
+}
+
+.chatbot-content #chat-btn {
+    background:#0984e3;
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-size:20px;
+    cursor: pointer;
+  border-radius: 20%;
+    transition:all .5s;
+    border: none;
+}
+.chatbot-content #chat-btn:hover{
+    color:black;
+    background: #fdcb6e;
 }
 
 
