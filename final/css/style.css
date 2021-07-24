@@ -168,6 +168,9 @@ header div span{
 .chatbot__response ul li span{
     width:89%;
     height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .chatbot__response ul li span a {
