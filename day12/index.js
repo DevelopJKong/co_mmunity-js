@@ -35,7 +35,7 @@ const imgWrapper = document.querySelector(".img-baloon__wrapper");
 const img = imgWrapper.querySelector("img");
 
 
-inputText.addEventListener("submit",function(e){
+function handlerSumbit(e){
     e.preventDefault();
     text.innerText = '';
     const li = document.createElement("li");
@@ -61,38 +61,11 @@ inputText.addEventListener("submit",function(e){
         imgWrapper.style.opacity = 0;
         ul.querySelector("li").innerText = message[3].response;
     }
-});
+}
 
 
-inputBtn.addEventListener("click",function(e){
-    e.preventDefault();
-    text.innerText = '';
-    const li = document.createElement("li");
-    let inputValue = inputText.value;
-    inputText.value = '';
-    ul.appendChild(li);
-    if(inputValue === message[0].request){
-        //would?
-        imgWrapper.style.opacity = 0;
-        ul.querySelector("li").innerText = message[0].response;
-    } else if(inputValue === message[1].request) {
-        //sad
-        imgWrapper.style.opacity = 0;
-        ul.querySelector("li").innerText = message[1].response;
-        setTimeout(function(){
-            block.style.display ="flex";
-            ul.querySelector("li").innerText = "☕: don't type 'no' 😒";
-        },2000);
-    } else if(inputValue === message[2].request){
-        //friend
-        imgWrapper.style.opacity = 1;
-        ul.querySelector("li").innerText = message[2].response;
-    } else {
-        //sorry & nothing & something
-        imgWrapper.style.opacity = 0;
-        ul.querySelector("li").innerText = message[3].response;
-    }
-});
+inputText.addEventListener("submit",handlerSumbit);
+inputBtn.addEventListener("click",handlerSumbit);
 
 blockBtn.addEventListener("click",function(e){
     e.preventDefault();

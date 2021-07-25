@@ -108,20 +108,7 @@ function push_message(){
     chatInput.value = "";
 }
 
-chat.addEventListener("click",function(e){
-    e.preventDefault();
-        chatContent.style.display = "flex";
-        chat.style.display = "none";
-});
-
-closeIcon.addEventListener("click",function(e){
-    e.preventDefault();
-    chatContent.style.display = "none";
-    chat.style.display = "flex";
-});
-
-
-chatInput.addEventListener("submit",function(e){
+function handlerSumbit(e){
     e.preventDefault();
     let value = chatInput.value;
 
@@ -160,51 +147,29 @@ chatInput.addEventListener("submit",function(e){
     chatLi.innerHTML = "<span>말을 가르쳐 주실래요?</span><span>(네 or 아니요)</span>";
 	request = value; //사용자의 질문을 미리 저장
 	key = 1;
-
-});
-
-
-chatBtn.addEventListener("click",function(e){
-    e.preventDefault();
-    let value = chatInput.value;
-
-
-    if(key == 1){ //key 값이 1인 경우, 사용자의 선택 유도
-        chatInput.value = "";
-		if(value == "네"){
-			chatLi.innerHTML = "대답을 입력해주세요!";
-			key = 2; //key 값을 2로 만들어, 대답을 입력받는 조건으로 변경
-            chatInput.value = "";
-		}
-		else{
-			chatLi.innerHTML = "넵!";
-			key = 0; // key값을 다시 0으로 변경하여 상태 변경
-            chatInput.value = "";
-		}
-		return;
-	}
-    if(key == 2){
-		response = value; //전역변수 response값에 사용자의 입력을 저장
-		push_message(); //message 데이터에 값을 추가하는 함수 (추후 생성)
-        return;
-     
-	}
- 
-    // chatLi.innerHTML= "<span>day1~day15 사이를</span> <span>입력해주세요 😎</span>" +
-    // "<span style='font-size:15px'>더 좋은 답변을 해드릴게요 😘</span>"
-    chatInput.value = "";
-    for(let i = 0; i<message.length; i++){
-        if(value === message[i].request){
-            chatLi.innerHTML =  message[i].response;
-            chatInput.value = "";
-            return;   
-    } 
-
 }
 
-    chatLi.innerHTML = "<span>말을 가르쳐 주실래요?</span><span>(네 or 아니요)</span>";
-    request = value; //사용자의 질문을 미리 저장
-    key = 1;
 
 
+
+
+
+
+
+chat.addEventListener("click",function(e){
+    e.preventDefault();
+        chatContent.style.display = "flex";
+        chat.style.display = "none";
 });
+
+closeIcon.addEventListener("click",function(e){
+    e.preventDefault();
+    chatContent.style.display = "none";
+    chat.style.display = "flex";
+});
+
+
+
+
+chatInput.addEventListener("submit",handlerSumbit);
+chatBtn.addEventListener("click",handlerSumbit);

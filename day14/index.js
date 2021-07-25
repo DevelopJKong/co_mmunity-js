@@ -46,125 +46,71 @@ const img = imgWrapper.querySelector("img");
 const report = document.querySelector(".pre__report");
 const reportContent = report.querySelectorAll(".report-flex");
 
-inputText.addEventListener("submit",function(e){
-    e.preventDefault();
-    text.innerText = '';
-    const li = document.createElement("li");
-    let inputValue = inputText.value;
-    inputText.value = '';
-    ul.appendChild(li);
+function handlerSumbit(e){
 
-    if(inputValue === message[0].request){
-        //would?
-        report.style.display = "none";
-        imgWrapper.style.opacity = 0;
-        ul.querySelector("li").innerText = message[0].response;
-    } else if(inputValue === message[1].request) {
-        //sad
-        report.style.display = "none";
-        ul.querySelector("li").innerText = message[1].response;
-        setTimeout(function(){
-            block.style.display ="flex";
-            ul.querySelector("li").innerText = "☕: don't type 'no' 😒";
-        },2000);
-    } else if(inputValue === message[2].request){
-        //friend
-        report.style.display = "none";
-        imgWrapper.style.opacity = 1;
-        ul.querySelector("li").innerText = message[2].response;
-    } else if(inputValue === message[3].request){
-        //good bye
-        report.style.display = "none";
-        imgWrapper.style.opacity = 0;
-        ul.querySelector("li").innerText = message[3].response;
-    } else if(inputValue === message[4].request){
-        //report
-        report.style.display = "grid";
-      
-        imgWrapper.style.opacity = 0;
-        ul.querySelector("li").innerText = message[4].response;
-    } else if(inputValue === message[5].request){
-        //sorry & nothing & something
-        report.style.display = "none";
-        imgWrapper.style.opacity = 0;
-        ul.querySelector("li").innerText = message[5].response;
-    } else {
-        report.style.display = "none";
-        imgWrapper.style.opacity = 0;
-        let typewriter = new Typewriter(ul.querySelector("li"),{
-            loop:false,
-        });
-        typewriter
-        .typeString("coffee cup don't catch your point.")
-        .pauseFor(1300)
-        .deleteAll()
-        .typeString("please type again. thanks 😎")
-        .pauseFor(2500)
-        .start();
-    }
-});
-
-
-inputBtn.addEventListener("click",function(e){
-    e.preventDefault();
-    text.innerText = '';
-    const li = document.createElement("li");
-    let inputValue = inputText.value;
-    inputText.value = '';
-    ul.appendChild(li);
-    if(inputValue === message[0].request){
-        //would?
-        report.style.display = "none";
-        imgWrapper.style.opacity = 0;
-        ul.querySelector("li").innerText = message[0].response;
-    } else if(inputValue === message[1].request) {
-        //sad
-        report.style.display = "none";
-        imgWrapper.style.opacity = 0;
-        ul.querySelector("li").innerText = message[1].response;
-        setTimeout(function(){
-            
-            block.style.display ="flex";
-            ul.querySelector("li").innerText = "☕: don't type 'no' 😒";
-        },2000);
-    } else if(inputValue === message[2].request){
-        //friend
-        report.style.display = "none";
-        imgWrapper.style.opacity = 1;
-        ul.querySelector("li").innerText = message[2].response;
-    } else if(inputValue === message[3].request){
-        //good bye
-        report.style.display = "none";
-        
-        imgWrapper.style.opacity = 0;
-        ul.querySelector("li").innerText = message[3].response;
-    } else if(inputValue === message[4].request){
-        
-        report.style.display = "grid";
-        imgWrapper.style.opacity = 0;
-        ul.querySelector("li").innerText = message[4].response;
-    }else if(inputValue === message[5].request){
-        //sorry & nothing & something
-        report.style.display = "none";
-        imgWrapper.style.opacity = 0;
-        ul.querySelector("li").innerText = message[5].response;
-    }else {
-        report.style.display = "none";
-        imgWrapper.style.opacity = 0;
-        let typewriter = new Typewriter(ul.querySelector("li"), {
-            loop: false
-          });
-        typewriter
-        .typeString("coffee cup don't catch your point.")
-        .pauseFor(1300)
-        .deleteAll()
-        .typeString("please type again. thanks 😎")
-        .pauseFor(2500)
-        .start();
-    }
+        e.preventDefault();
+        text.innerText = '';
+        const li = document.createElement("li");
+        let inputValue = inputText.value;
+        inputText.value = '';
+        ul.appendChild(li);
     
-});
+        if(inputValue === message[0].request){
+            //would?
+            report.style.display = "none";
+            imgWrapper.style.opacity = 0;
+            ul.querySelector("li").innerText = message[0].response;
+        } else if(inputValue === message[1].request) {
+            //sad
+            report.style.display = "none";
+            ul.querySelector("li").innerText = message[1].response;
+            setTimeout(function(){
+                block.style.display ="flex";
+                ul.querySelector("li").innerText = "☕: don't type 'no' 😒";
+            },2000);
+        } else if(inputValue === message[2].request){
+            //friend
+            report.style.display = "none";
+            imgWrapper.style.opacity = 1;
+            ul.querySelector("li").innerText = message[2].response;
+        } else if(inputValue === message[3].request){
+            //good bye
+            report.style.display = "none";
+            imgWrapper.style.opacity = 0;
+            ul.querySelector("li").innerText = message[3].response;
+        } else if(inputValue === message[4].request){
+            //report
+            report.style.display = "grid";
+          
+            imgWrapper.style.opacity = 0;
+            ul.querySelector("li").innerText = message[4].response;
+        } else if(inputValue === message[5].request){
+            //sorry & nothing & something
+            report.style.display = "none";
+            imgWrapper.style.opacity = 0;
+            ul.querySelector("li").innerText = message[5].response;
+        } else {
+            report.style.display = "none";
+            imgWrapper.style.opacity = 0;
+            let typewriter = new Typewriter(ul.querySelector("li"),{
+                loop:false,
+            });
+            typewriter
+            .typeString("coffee cup don't catch your point.")
+            .pauseFor(1300)
+            .deleteAll()
+            .typeString("please type again. thanks 😎")
+            .pauseFor(2500)
+            .start();
+        }
+    }
 
+
+
+
+
+inputText.addEventListener("submit",handlerSumbit);
+inputBtn.addEventListener("click",handlerSumbit);
 blockBtn.addEventListener("click",function(e){
     e.preventDefault();
     block.style.display = "none";
