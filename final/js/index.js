@@ -105,6 +105,7 @@ function push_message(){
 	message.push({request: `${request}`, response: `${response}`}); //message(이라는 데이터에 값을 추가하는 push함수
 	chatLi.innerHTML = "말을 배웠어요!";
 	key = 0; //키 값 0으로 초기화
+    chatInput.value = "";
 }
 
 chat.addEventListener("click",function(e){
@@ -142,6 +143,7 @@ chatInput.addEventListener("submit",function(e){
     if(key == 2){
 		response = value; //전역변수 response값에 사용자의 입력을 저장
 		push_message(); //message 데이터에 값을 추가하는 함수 (추후 생성)
+        return;
 	}
     chatInput.value = "";
     // chatLi.innerHTML= "<span>day1~day15 사이를</span> <span>입력해주세요 😎</span>" +
@@ -172,19 +174,22 @@ chatBtn.addEventListener("click",function(e){
 		if(value == "네"){
 			chatLi.innerHTML = "대답을 입력해주세요!";
 			key = 2; //key 값을 2로 만들어, 대답을 입력받는 조건으로 변경
+            chatInput.value = "";
 		}
 		else{
 			chatLi.innerHTML = "넵!";
 			key = 0; // key값을 다시 0으로 변경하여 상태 변경
+            chatInput.value = "";
 		}
 		return;
 	}
     if(key == 2){
 		response = value; //전역변수 response값에 사용자의 입력을 저장
 		push_message(); //message 데이터에 값을 추가하는 함수 (추후 생성)
+        return;
+     
 	}
-
-
+ 
     // chatLi.innerHTML= "<span>day1~day15 사이를</span> <span>입력해주세요 😎</span>" +
     // "<span style='font-size:15px'>더 좋은 답변을 해드릴게요 😘</span>"
     chatInput.value = "";
